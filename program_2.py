@@ -6,13 +6,28 @@
 # If the person is at least 20 year old, it should display "adult".
 
 def categorize_age(age):
-    ageCategory = "TBD"
-    ######################
-    # WRITE YOUR CODE HERE
-    ######################
 
+    if age <= 1:
+        ageCategory = "infant"
+    elif age < 13:
+        ageCategory = "child"
+    elif age < 20:
+        ageCategory = "teenager"
+    else:
+        ageCategory = "adult"
 
     return ageCategory
+
+
+if __name__ == '__main__':
+    # Get age from the user
+    age = float(input("Enter the person's age: "))
+    
+    # Determine and display the age category
+    ageBucket = categorize_age(age)
+    print(ageBucket)
+
+   
 
 
 #### This piece of the code has been done for you,
